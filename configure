@@ -1,5 +1,5 @@
 #!/bin/sh
 htpasswd -bc /etc/squid/passwords "${USERNAME}" "${PASSWORD}"
-
 echo "Starting Squid..."
-exec squid -NYCd 1
+
+exec rc-service squid start
