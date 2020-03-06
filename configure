@@ -1,7 +1,5 @@
 #!/bin/sh
 htpasswd -bc /etc/squid/passwords "${USERNAME}" "${PASSWORD}"
 
-squid -k reconfigure
-
 echo "Starting Squid..."
-exec "$SQUID" -NYCd 1
+exec squid -NYCd 1
