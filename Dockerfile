@@ -1,9 +1,8 @@
 FROM alpine:latest
 
 USER root
-WORKDIR ~/
 
-RUN apk add --no-cache squid
+RUN apk add --no-cache squid apache2-utils
 
 COPY configure ./
 COPY conf/squid.conf /etc/squid/squid.conf
