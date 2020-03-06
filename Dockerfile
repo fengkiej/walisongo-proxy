@@ -10,4 +10,4 @@ RUN chmod a+x configure
 
 EXPOSE 17845/tcp
 
-ENTRYPOINT ["./configure"]
+CMD ["./configure"]
