@@ -1,8 +1,8 @@
-FROM alpine:latest
+FROM debian:bullseye-slim
 
 USER root
-
-RUN apk add --no-cache squid apache2-utils
+RUN apt update
+RUN apt install squid apache2-utils -y
 
 COPY configure ./
 COPY conf/squid.conf /etc/squid/squid.conf
